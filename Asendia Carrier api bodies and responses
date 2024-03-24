@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "e47ec0e6-3226-4837-a0cc-720f6566d627",
+		"name": "Asendia Carrier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33824200"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/asendia/singup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Akash\",\r\n  \"email\":\"akash@gmail.com\",\r\n  \"password\": \"Akash\",\r\n  \"phone\":\"9876543210\",\r\n  \"address\":\"woxsen university, Hyderabad, Telangana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/asendia/singup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"asendia",
+						"singup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/asendia/singup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Guna\",\r\n  \"email\":\"Guna@gmail.com\",\r\n  \"password\": \"Guna\",\r\n  \"phone\":\"9876543210\",\r\n  \"address\":\"woxsen university, Hyderabad, Telangana\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/asendia/singup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"asendia",
+								"singup"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 24 Mar 2024 06:55:42 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "25"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"User Created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/asendia/getQuote",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNYW5qaXRoIiwiZXhwIjoxNzExMjYwNDI5fQ.-T3ry852k26BmgYqVh7ORur1atZ5vN4Veav8wtedWyQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickup\": \"Hyderabad\",\r\n  \"drop\": \"delhi\",\r\n  \"weight_in_kg\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/asendia/getQuote",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"asendia",
+						"getQuote"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/asendia/getQuote",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pickup\": \"Hyderabad\",\r\n  \"drop\": \"delhi\",\r\n  \"weight_in_kg\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/asendia/getQuote",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"asendia",
+								"getQuote"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 24 Mar 2024 06:58:00 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "98"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"rate\": \"₹25097\",\n    \"pickup\": \"Hyderabad\",\n    \"drop\": \"delhi\",\n    \"weight_in_kg\": 10,\n    \"distance_in_KM\": 1254.85\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/asendia/gettoken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Manjith\",\r\n  \"password\": \"Manjith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/asendia/gettoken",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"asendia",
+						"gettoken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/asendia/gettoken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"Guna\",\r\n  \"password\": \"Guna\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/asendia/gettoken",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"asendia",
+								"gettoken"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 24 Mar 2024 06:57:40 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "164"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJHdW5hIiwiZXhwIjoxNzExMjY1MjYwfQ.h1VASFEuUg1IObL6XsC24u5eHSciqDJ-qrN7ETzca0U\",\n    \"token_type\": \"bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/asendia/getshipmenttracking/8",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJNYW5qaXRoIiwiZXhwIjoxNzExMjYyMzA4fQ.2dion2cCgwmOoVyz1rfb1aeyC9QrUdoc41LdvQzgKLo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/asendia/getshipmenttracking/8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"asendia",
+						"getshipmenttracking",
+						"8"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/asendia/getshipmenttracking/8",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/asendia/getshipmenttracking/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"asendia",
+								"getshipmenttracking",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 24 Mar 2024 06:59:14 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "319"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shipment_id\": 10,\n    \"sender\": \"Ravi\",\n    \"receiver\": \"Akash\",\n    \"driver_name\": \"Varun\",\n    \"driver_license_number\": \"TS-13/DLC/12/ 9876\",\n    \"driver_phone\": \"9123456780\",\n    \"driver_vehicle_plate\": \"TS-03-HA-2002\",\n    \"pickup\": \"Mumbai\",\n    \"drop\": \"Delhi\",\n    \"estimated_cost_in_rupes\": 22883,\n    \"estimated_delivery_date\": \"2024-03-27\",\n    \"current_location\": \"Mumbai\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/asendia/createShipment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJSYXZpIiwiZXhwIjoxNzExMjYzNTE4fQ.pZzyU742Vww_qfedzuLQ_K6sIN09784jMA11obpt_IY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pickup\": \"Mumbai\",\r\n  \"drop\": \"Delhi\",\r\n  \"weight_in_kg\": 10,\r\n  \"sender_name\": \"Ravi\",\r\n  \"receiver_name\": \"Akash\",\r\n  \"package_length\": 10,\r\n  \"package_width\": 10,\r\n  \"package_height\": 10,\r\n  \"package_description\": \"delivery in time\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/asendia/createShipment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"asendia",
+						"createShipment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/asendia/createShipment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"pickup\": \"Mumbai\",\r\n  \"drop\": \"Delhi\",\r\n  \"weight_in_kg\": 10,\r\n  \"sender_name\": \"Ravi\",\r\n  \"receiver_name\": \"Akash\",\r\n  \"package_length\": 10,\r\n  \"package_width\": 10,\r\n  \"package_height\": 10,\r\n  \"package_description\": \"delivery in time\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/asendia/createShipment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"asendia",
+								"createShipment"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 24 Mar 2024 06:58:52 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "312"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"shipment_id\": 10,\n    \"rate\": \"₹22883\",\n    \"pickup\": \"Mumbai\",\n    \"drop\": \"Delhi\",\n    \"weight_in_kg\": 10,\n    \"distance_in_KM\": 1144.16,\n    \"sender_name\": \"Ravi\",\n    \"receiver_name\": \"Akash\",\n    \"package_length\": 10,\n    \"package_width\": 10,\n    \"package_height\": 10,\n    \"package_description\": \"delivery in time\",\n    \"estimated_delivery_date\": \"2024-03-27 12:28:54.095766\"\n}"
+				}
+			]
+		}
+	]
+}

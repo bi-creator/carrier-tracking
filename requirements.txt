@@ -1,2 +1,6 @@
 python-jose[cryptography]
 passlib[bcrypt]
+fastapi
+uvicorn
+
+
