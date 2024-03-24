@@ -13,5 +13,12 @@ once uvicorn server is up, navigate to http://127.0.0.1:8000/docs (fastapi swage
 api bodies and responses are added to repo for reference in json format.
 
 
-Note:- Both sender and reciver must signup before creating a shipment.
+Note:- 
+  1.Both sender and reciver must signup before creating a shipment.
+  2.Call 
+        /asendia/getQuote
+        /asendia/createShipment
+        /asendia/getshipmenttracking/{shipment_id}
+    
+    apis whith barer token in header
 
